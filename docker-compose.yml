@@ -12,21 +12,23 @@ app1:
   ports:
     - "3000"
   links:
-    - "cache: redis"
+    - "redis"
 
 app2:
   build: ./app
   ports:
     - "3000"
   links:
-    - "cache: redis"
+    - "redis"
 
 app3:
   build: ./app
   ports:
     - "3000"
   links:
-    - "cache: redis"
+    - "redis"
 
-cache:
-  image: redis
+redis:
+  build: ./redis
+  ports: 
+    - "6379"
