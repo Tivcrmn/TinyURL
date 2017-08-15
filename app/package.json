@@ -12,6 +12,8 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "express-useragent": "^1.0.7",
+    "geoip-lite": "^1.2.1",
     "mongoose": "^4.11.3",
     "redis": "^2.8.0"
   }
