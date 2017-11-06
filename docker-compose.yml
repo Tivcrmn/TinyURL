@@ -1,7 +1,7 @@
 nginx:
   build: ./nginx
   ports: 
-    - "3000:80"
+    - "4000:80"
   links:
     - "app1:app1"
     - "app2:app2"
@@ -12,7 +12,7 @@ app1:
   volumes:
     - ./app:/app
   ports:
-    - "3000"
+    - "4000"
   links:
     - "redis"
 
@@ -21,7 +21,7 @@ app2:
   volumes:
     - ./app:/app
   ports:
-    - "3000"
+    - "4000"
   links:
     - "redis"
 
@@ -30,7 +30,7 @@ app3:
   volumes:
     - ./app:/app
   ports:
-    - "3000"
+    - "4000"
   links:
     - "redis"
 

@@ -16,6 +16,6 @@ ADD . /app
 
 RUN cd /app && cnpm install
 
-EXPOSE 3000
+EXPOSE 4000
 
 CMD ["nodemon", "/app/server.js"]

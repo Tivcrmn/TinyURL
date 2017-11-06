@@ -2,11 +2,102 @@
 	<div class="col-md-5 col-md-offset-2">
 		<div class="row">
 			<h4>Your longURL is:</h4>
-			<a ng-href="{{longUrl}}" target="_blank">{{longUrl}}</a>
+			<h3><a ng-href="{{longUrl}}" target="_blank">{{longUrl}}</a></h3>
 		</div>
 		<div class="row">
 			<h4>Your shortURL is:</h4>
 			<h3><a ng-href="{{shortUrl}}" target="_blank">{{shortUrl}}</a></h3>
+		</div>
+	</div>
+	<div class="col-md-5">
+		<div class="panel panel-default">
+	    <div class="panel-heading">
+	        <h3 class="panel-title">
+	          点击数
+	        </h3>
+	    </div>
+	    <div class="panel-body">
+	        <h2>{{totalClicks}}</h2>
+	    </div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+		    Click for different time periods
+		    <a href="javascript:void(0);" ng-class="{ 'text-muted': time === 'hour'}" ng-click="getInfoByTime(hour)">Hour</a>
+		    <a href="javascript:void(0);" ng-class="{ 'text-muted': time === 'day'}" ng-click="getInfoByTime(day)">Day</a>
+		    <a href="javascript:void(0);" ng-class="{ 'text-muted': time === 'month'}" ng-click="getInfoByTime(month)">Month</a>
+		  </div>
+		  <div class="panel-body">
+	      <canvas class="chart chart-line"
+  				chart-data="data" chart-labels="label">
+				</canvas> 
+	    </div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-default">
+	    <div class="panel-heading">
+	        <h3 class="panel-title">
+	          countries
+	        </h3>
+	    </div>
+	    <div class="panel-body">
+	      <canvas id="countries" class="chart chart-doughnut"
+  				chart-data="countryData" chart-labels="countryLabel">
+				</canvas> 
+	    </div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-default">
+	    <div class="panel-heading">
+	        <h3 class="panel-title">
+	          platform
+	        </h3>
+	    </div>
+	    <div class="panel-body">
+	      <canvas id="platform" class="chart chart-pie"
+				  chart-data="platformData" chart-labels="platformLabel">
+				</canvas> 
+	    </div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-default">
+	    <div class="panel-heading">
+	        <h3 class="panel-title">
+	          browser
+	        </h3>
+	    </div>
+	    <div class="panel-body">
+	      <canvas id="browser" class="chart chart-horizontal-bar"
+  				chart-data="browserData" chart-labels="browserLabel">
+				</canvas> 
+	    </div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-default">
+	    <div class="panel-heading">
+	        <h3 class="panel-title">
+	          referer
+	        </h3>
+	    </div>
+	    <div class="panel-body">
+	       <canvas id="referer" class="chart chart-pie"
+				  chart-data="refererData" chart-labels="refererLabel">
+				</canvas> 
+	    </div>
 		</div>
 	</div>
 </div>

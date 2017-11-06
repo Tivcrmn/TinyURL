@@ -1,4 +1,4 @@
-var app = angular.module('tinyurlApp', ["ngRoute", "ngResource"]);
+var app = angular.module('tinyurlApp', ["chart.js", "ngResource", "ngRoute"]);
 
 app.config(function ($routeProvider) {
 	$routeProvider
@@ -11,3 +11,4 @@ app.config(function ($routeProvider) {
 			controller: "urlController"
 		});
 });
+
