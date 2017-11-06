@@ -21,7 +21,7 @@ Other tools and technologies used:
 
 ## Prerequisites
 
-1. Install Docker
+1. Install Docker,Redis
 2. Filling the mongoose username and password in the tinyurl/app/server.js
 ```shell
 mongoose.connect("mongodb://<username>:<password>@<host:database>", {useMongoClient: true});
